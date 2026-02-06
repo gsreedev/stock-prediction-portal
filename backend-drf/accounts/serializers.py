@@ -13,5 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
                 validated_data['email'],
                 validated_data['password']
             )
-            # user = User.objects.create_user(**validated_data)
+            #User.objects.create = save the password in plain text
+            #User.objects.create_user = automatically hash the password
+        # user = User.objects.create_user(**validated_data)
         return user
